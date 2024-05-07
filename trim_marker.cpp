@@ -58,7 +58,7 @@ void extract_characters(const std::string& line, const std::string& file,
 			const std::vector<int> positions) {
 	std::ofstream outfile(file, std::ios::app);
 	std::string new_line;
-	for (int pos : positions) {
+	for (unsigned long pos : positions) {
 		if (pos <= line.length()) {
 			new_line += line[pos - 1];  // start from 0
 		}
